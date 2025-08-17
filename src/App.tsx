@@ -1,23 +1,20 @@
-import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import Navbar from './components/Navbar'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <div className="p-6 space-y-6">
-      <h1 className="text-3xl font-bold underline text-red-500">Test</h1>
+    <div className="min-h-screen flex flex-col">
+      {/* Navbar at the top */}
+      <Navbar />
 
-      <button
-        className="rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
-        onClick={() => setCount((c) => c + 1)}
-      >
-        Count is {count}
-      </button>
-      <p className="text-gray-600">
-        If “Test” is large, bold, underlined, and red, Tailwind is working.
-      </p>
+      {/* Page content */}
+      <main className="flex-1 p-6 space-y-6">
+        {/* Router setup for just the Home route for now */}
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </main>
     </div>
   )
 }
-
-export default App
