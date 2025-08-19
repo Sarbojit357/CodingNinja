@@ -6,6 +6,7 @@ import PracticePage from './pages/PracticePage'
 import EventsPage from './pages/EventsPage'
 import LoginPage from './pages/LoginPage'
 import SignupPage from './pages/SignupPage'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
@@ -25,6 +26,9 @@ export default function App() {
           <Route path="/signup" element={<SignupPage />} />
         </Routes>
       </main>
+
+      {/* Footer at the bottom */}
+      <Footer />
     </div>
   )
 }

@@ -1,69 +1,91 @@
-# React + TypeScript + Vite
+// ...existing code...
+# CodingNinja (Clone) 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive clone of the CodingNinjas learning platform built with React, TypeScript and Vite. Intended as a UI prototype / starter for frontend work and integration with a backend.
 
-Currently, two official plugins are available:
+## Features
+- Responsive pages: Home, Courses, Practice, Events, Login, Signup
+- Multi-step signup form with client-side validation
+- Navbar and Footer components
+- Course listings and simple mock/fallback data
+- Accessible SVG icons with hover color styles
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- React 18 + TypeScript
+- Vite (dev server + build)
+- Tailwind CSS (utility styling) or plain CSS depending on project files
+- ESLint for linting
 
-## Expanding the ESLint configuration
+## Quick Start
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Prerequisites
+- Node.js v16+ (recommended)
+- npm or yarn
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Install
+```bash
+npm install
+# or
+yarn
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Run development server
+```bash
+npm run dev
+# or
+yarn dev
 ```
+
+Build for production
+```bash
+npm run build
+# or
+yarn build
+```
+
+Preview production build
+```bash
+npm run preview
+# or
+yarn preview
+```
+
+## Available Scripts
+- npm run dev — start dev server with HMR
+- npm run build — production build
+- npm run preview — preview production build
+- npm run lint — run ESLint (if configured)
+- npm run test — run tests (if present)
+
+Adjust exact script names to match package.json.
+
+## Environment / Backend
+This project is frontend-first. If you integrate a backend:
+- Add API base URL in an .env file (example for Vite):
+```env
+VITE_API_BASE_URL=http://localhost:4000/api
+```
+- Access via import.meta.env.VITE_API_BASE_URL
+- Ensure CORS is enabled on the backend for local development
+
+## Development Notes
+- Signup form POSTs to `/api/signup`. If no backend exists, the app can use a localStorage fallback (dev mode) — check the signup handler in src/pages/SignupPage.tsx.
+- Footer social icons are SVGs using fill="currentColor" so hover color can be controlled via CSS (e.g. hover:text-[--color-ninjaOrange]).
+- When flows fail, open browser DevTools → Network & Console to inspect errors (CORS, 404, network).
+
+## Contributing
+1. Fork the repository
+2. Create a branch: git checkout -b feat/your-feature
+3. Commit changes: git commit -m "feat: description"
+4. Push and open a PR
+
+Keep changes focused and run lint/tests before submitting.
+
+## License
+Choose a license (e.g. MIT) before publishing. This repo is a learning/demo clone — avoid infringing trademarks.
+
+## Contact
+Open an issue for bugs or feature requests. For questions, add a GitHub issue or contact the maintainer listed in the repository.
+
+<!-- End of README -->
+//
