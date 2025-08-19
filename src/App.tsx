@@ -4,6 +4,8 @@ import Navbar from './components/Navbar'
 import CoursesPage from './pages/CoursesPage'
 import PracticePage from './pages/PracticePage'
 import EventsPage from './pages/EventsPage'
+import LoginPage from './pages/LoginPage'
+import SignupPage from './pages/SignupPage'
 
 export default function App() {
   return (
@@ -19,6 +21,8 @@ export default function App() {
           <Route path="/courses" element={<CoursesPage />} />
           <Route path="/practice" element={<PracticePage />} />
           <Route path="/events" element={<EventsPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
         </Routes>
       </main>
     </div>
