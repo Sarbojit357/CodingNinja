@@ -1,5 +1,4 @@
-// ...existing code...
-# CodingNinja (Clone) 🚀
+# CodingNinja 🚀
 
 A modern, responsive clone of the CodingNinjas learning platform built with React, TypeScript and Vite. Intended as a UI prototype / starter for frontend work and integration with a backend.
 
@@ -86,6 +85,3 @@ Choose a license (e.g. MIT) before publishing. This repo is a learning/demo clon
 
 ## Contact
 Open an issue for bugs or feature requests. For questions, add a GitHub issue or contact the maintainer listed in the repository.
-
-<!-- End of README -->
-//
