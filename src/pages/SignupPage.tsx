@@ -18,7 +18,7 @@ export default function SignupPage() {
   const [step, setStep] = useState(1)
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState<string | null>(null)
-  const [loading, setLoading] = useState(false) // now used in JSX
+  const [loading, setLoading] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value, type, checked } = e.target as HTMLInputElement
@@ -27,10 +27,6 @@ export default function SignupPage() {
     } else {
       setFormData(prev => ({ ...prev, [name]: value }))
     }
-  }
-
-  const handleCourseSelect = (courseId: string) => {
-    setFormData(prev => ({ ...prev, selectedCourse: courseId }))
   }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
