@@ -15,6 +15,12 @@ A modern, responsive clone of the CodingNinjas learning platform built with Reac
 - Tailwind CSS (utility styling) or plain CSS depending on project files
 - ESLint for linting
 
+## Screenshots
+
+![cd1](https://github.com/user-attachments/assets/a24dbd6e-74a8-47f6-8310-9a3d38b0e367)
+
+
+
 ## Quick Start
 
 Prerequisites
